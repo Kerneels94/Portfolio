@@ -45,7 +45,7 @@ scrollLinks.forEach((link) => {
     let position = element.offSetTop - specificSpot;
 
     // Logic
-    if (!navHeight) {
+    if (navHeight === 0) {
       position = position - specificSpot;
     }
     // if the spot on the page is > 82 px
