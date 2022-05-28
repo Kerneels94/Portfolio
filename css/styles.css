@@ -1,0 +1,394 @@
+:root {
+  /* Background colors */
+  --background-color-dark: #262626;
+  --background-color-light: #fff;
+  --background-color-orangered: #ff4500;
+  /* Text colors */
+  --text-color-dark: #262626;
+  --text-color-light: #fff;
+  --text-color-green: #90ee90;
+  /* Shadow */
+  /* Padding */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  display: block;
+  opacity: 1;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: lightgreen;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.5;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 1em;
+  font-weight: 400;
+  text-align: center;
+}
+
+header {
+  background: linear-gradient(180deg, rgba(235, 82, 5, 0.2), rgba(0, 0, 0, 0.5)),
+    url("/images/background-3.jpg") center/cover no-repeat;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #262626;
+  padding: 1rem;
+  cursor: pointer;
+  color: var(--text-color-green);
+  border: none;
+}
+
+.btn:hover {
+  background-color: rgba(238, 98, 4, 0.5);
+  color: var(--text-color-light);
+}
+
+/* Contact button */
+.contact-btn {
+  display: none;
+}
+
+/* Utility classes */
+
+/* Header */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.nav-toggle:hover {
+  transform: rotate(360deg);
+  transition: all ease-in 0.8s;
+}
+
+.links {
+  height: 0;
+  overflow: hidden;
+  padding: 1rem;
+  display: none;
+  transition: all ease-in 0.5s;
+}
+
+.links a {
+  color: var(--text-color-green);
+  font-size: 1rem;
+  text-transform: capitalize;
+  padding: 0.5rem 1rem;
+}
+
+/* Toggle the navbar */
+.links-toggle {
+  background-color: var(--background-color-dark);
+  color: var(--background-color-light);
+  height: 250px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 12%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  transition: all ease-in 0.5s;
+}
+
+.logo {
+  color: var(--text-color-light);
+  padding-top: 1.5em;
+}
+
+/* banner  for the header*/
+.banner {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: var(--text-color-light);
+}
+
+.banner-heading-container {
+  background-color: var(--background-color-orangered);
+  padding: 0.2em;
+  display: inline-block;
+}
+
+.banner p {
+  line-height: 2;
+  font-size: 1.2em;
+}
+/* Second banner for the header */
+.banner2 {
+  color: white;
+  text-align: left;
+}
+
+/* !There will be 2 methods to split content on the page */
+/* Flexbox*/
+#split {
+  display: flex;
+  flex-direction: column;
+}
+
+/* The grid version will only be used on larger screens */
+
+/* Class to place the content in the middle of the page */
+.container {
+  width: min(90%, 80rem);
+  margin-inline: auto;
+  overflow: hidden;
+}
+/* Text containers */
+
+.skills-text-container {
+  font-size: 1.2em;
+}
+
+.text-container-center {
+  text-align: center;
+  font-size: 1.3em;
+  margin-top: 1em;
+}
+
+.text-container-left {
+  text-align: left;
+  color: #fff;
+  margin-top: 1em;
+}
+
+.text-container-right {
+  text-align: right;
+  color: #fff;
+  margin-top: 1em;
+}
+
+/* Material icons */
+.material-icons {
+  color: var(--background-color-light);
+  cursor: pointer;
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+/* Section-A-Projects - Cards section*/
+.cards-container {
+  padding: 2rem;
+  align-items: center;
+}
+
+.card {
+  box-shadow: 20px 10px 10px #262626;
+  width: 70%;
+  height: 50%;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 2em;
+  background-color: var(--background-color-dark);
+  color: var(--background-color-light);
+}
+
+.card:hover {
+  box-shadow: 20px 10px 10px lightgreen;
+  color: var(--background-color-light);
+}
+
+.card a {
+  text-align: center;
+  display: block;
+  color: lightgreen;
+  /* cursor: pointer; */
+}
+.card-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15%;
+}
+
+/* Skills section */
+.icon-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.icon {
+  width: 100px;
+  height: 100px;
+}
+
+/* Contact section */
+
+/* Contact form */
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contact-container p {
+  font-size: 0.8em;
+}
+
+.form-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+
+  background-color: var(--background-color-dark);
+  color: #fff;
+  padding: 2em;
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"],
+select,
+textarea {
+  width: 70%; /* Full width */
+  padding: 2em; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Media queries */
+@media (min-width: 60em) {
+  /* Splitting methods */
+  #split {
+    flex-direction: row;
+  }
+
+  #split-vertical {
+    flex-direction: column;
+  }
+
+  #split > * + * {
+    margin-left: 2em;
+  }
+
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .links {
+    height: auto;
+    font-size: 1.2em;
+    display: block;
+  }
+
+  .scroll-links a {
+    background-color: #262626;
+    color: lightgreen;
+    padding: 1rem 3rem;
+  }
+
+  .scroll-links a:hover {
+    transition: all ease-in 1s;
+    transform: rotate(360deg);
+  }
+
+  .contact-btn {
+    display: inline-block;
+  }
+
+  /* Text containers */
+
+  .skills-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2em;
+  }
+
+  .skills-text-container p {
+    font-size: 0.85em;
+  }
+
+  /* Contact form  */
+  .contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2em;
+  }
+
+  .contact-container p {
+    font-size: 0.8em;
+  }
+}

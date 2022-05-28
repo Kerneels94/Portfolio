@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Css -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <link rel="stylesheet" href="@splidejs/splide/dist/css/splide.min.css" /> -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Portfolio of Corrie botha</title>
+  </head>
+  <body>
+    <!-- Header section of the website -->
+
+    <!-- Create container -->
+    <header>
+      <!-- Nav-->
+      <nav class="navbar">
+        <div class="logo">
+          <h2>Corrie Botha</h2>
+        </div>
+        <ul class="links">
+          <li class="scroll-links"><a href="#projects">Projects</a></li>
+          <li class="scroll-links"><a href="#why">About</a></li>
+          <li class="scroll-links"><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#" class="contact-btn btn">Contact me</a>
+        <!-- Bar -->
+        <a class="nav-toggle">
+          <span class="material-icons md-36"> menu </span>
+        </a>
+      </nav>
+      <!-- Banner -->
+      <div class="banner" id="grid">
+        <div class="container">
+          <h1 class="banner-heading-container">Front-End Developer</h1>
+          <!-- I used inline styles explicitly style a few words, The styling of the words will never change-->
+          <!-- Readability might be an issue due to the way prettier formats the code -->
+          <p>
+            I learned how to
+            <span
+              style="
+                color: lightgreen;
+                background-color: #262626;
+                padding: 0.4em;
+              "
+              ><b>Code</b></span
+            >
+            to
+            <span
+              style="
+                color: lightgreen;
+                background-color: #262626;
+                padding: 0.4em;
+              "
+              ><b>achieve one goal</b></span
+            >
+          </p>
+          <p>
+            Transfrom my
+            <span
+              style="
+                color: lightgreen;
+                background-color: #262626;
+                padding: 0.4em;
+              "
+              ><b>ideas</b></span
+            >
+            into reality
+          </p>
+          <a href="#" class="btn">Learn more!</a>
+        </div>
+        <div class="banner2">
+          <p>"Persistance === ${A new yourney}"</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Projects -->
+      <section id="projects" class="container">
+        <div class="text-container-center">
+          <h1>My Projects<span>&#8595;</span></h1>
+        </div>
+        <div class="cards-container" id="split">
+          <div class="card">
+            <h2>Jpb-Maintenance</h2>
+            <div class="card-image">
+              <img src="./images/pa-site-2.JPG" alt="image of the website" />
+            </div>
+            <p>They specialize in Steelwork</p>
+            <button class="btn">
+              <a href="https://www.jpbmainetance.co.za">Visit site</a>
+            </button>
+            <button class="btn"><a href="#">Source Code</a></button>
+          </div>
+
+          <div class="card">
+            <h2>Jpb-Maintenance</h2>
+            <div class="card-image">
+              <img src="./images/pa-site-2.JPG" alt="image of the website" />
+            </div>
+            <p>They specialize in Steelwork</p>
+            <button class="btn">
+              <a href="https://www.jpbmainetance.co.za">Visit site</a>
+            </button>
+            <button class="btn"><a href="#">Source Code</a></button>
+          </div>
+
+          <div class="card">
+            <h2>Jpb-Maintenance</h2>
+            <div class="card-image">
+              <img src="./images/pa-site-2.JPG" alt="image of the website" />
+            </div>
+            <p>They specialize in Steelwork</p>
+            <button class="btn">
+              <a href="https://www.jpbmainetance.co.za">Visit site</a>
+            </button>
+            <button class="btn"><a href="#">Source Code</a></button>
+          </div>
+
+          <!-- 
+          <div class="project-text-container">
+            <h1>All projects</h1>
+            <p>If you want to see all the projects i have worked on</p>
+            <button class="btn"><a href="#">Click Me</a></button>
+          </div> -->
+
+          <div class="card">
+            <h2>Jpb-Maintenance</h2>
+            <div class="card-image">
+              <img src="./images/pa-site-2.JPG" alt="image of the website" />
+            </div>
+            <p>They specialize in Steelwork</p>
+            <button class="btn">
+              <a href="https://www.jpbmainetance.co.za">Visit site</a>
+            </button>
+            <button class="btn"><a href="#">Source Code</a></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="skills container" id="grid">
+        <div class="skills-text-container">
+          <h1>Skills <span style="font-size: 35px">&#8594;</span></h1>
+          <p>
+            Laungaues i have learned to date i would like to learn Back-end
+            Development so that I can transition into full stack development in
+            the coming years.
+          </p>
+        </div>
+        <div class="icon-list" id="split-vertical">
+          <div class="icon">
+            <img src="./images/Html 5 icon.png" alt="icons image" />
+          </div>
+
+          <div class="icon">
+            <img src="./images/CSS3 icon.png" alt="icons image" />
+          </div>
+
+          <div class="icon">
+            <img src="./images/JavaScript icon.png" alt="icons image" />
+          </div>
+
+          <div class="icon">
+            <img src="./images/Bootstrap icon.png" alt="icons image" />
+          </div>
+
+          <div class="icon">
+            <img src="./images/Sass icon.png" alt="icons image" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact container" id="grid">
+        <div class="contact-container2">
+          <form action="contact.php">
+            <div class="form-control">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Name" />
+
+              <label for="email">Email</label>
+              <input type="text" id="email" placeholder="Email" />
+
+              <label for="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Message"
+              ></textarea>
+              <input type="submit" value="submit" class="btn" />
+            </div>
+          </form>
+        </div>
+        <div class="contact-container">
+          <h1><span class="arrow">&#8592;</span>Lets Connect</h1>
+          <p>
+            If you want to get in touch with me or have any qeustions kindly
+            visit my Socials or directly contact me
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-container container">
+      <div class="text-container" id="split">
+        <h1>Created by Corrie botha</h1>
+        <p>
+          &copy;
+          <span id="date"></span>
+        </p>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="./js/main.js" defer></script>
+  </body>
+</html>
