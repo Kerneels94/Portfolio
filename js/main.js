@@ -27,38 +27,3 @@ links.addEventListener("click", () => {
     links.classList.remove("links-toggle");
   }
 });
-
-// Scroll behavior of the page
-
-scrollLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    // When the link is clicked nothing happens
-    e.preventDefault();
-    // navigate to a specific spot on the page
-    const specificSpot = e.currentTarget.getAttribute("href").slice(1);
-    const elementOnPage = document.getElementById(specificSpot);
-    // Heights
-    const navHeight = navToggle.getBoundingClientRect().height;
-    const containerHeight = links.getBoundingClientRect().height;
-
-    // Position
-    let position = element.offSetTop - specificSpot;
-
-    // Logic
-    if (navHeight === 0) {
-      position = position - specificSpot;
-    }
-    // if the spot on the page is > 82 px
-    if (specificSpot > 82) {
-      position = position + containerHeight;
-    }
-
-    window.scrollTo({
-      left: 0,
-      top: position,
-    });
-
-    // To close the window
-    links.style.height = 0;
-  });
-});
