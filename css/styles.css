@@ -47,7 +47,7 @@ h1,
 h2,
 h3 {
   line-height: 1.5;
-  margin-bottom: 1em;
+  margin: 1em 0;
   text-align: center;
   font-size: 2em;
 }
@@ -66,11 +66,11 @@ header {
 }
 
 section {
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 
 div {
-  margin-top: 2rem;
+  margin: 0.5rem 0;
 }
 
 .btn {
@@ -169,6 +169,21 @@ div {
 .banner2 {
   color: white;
   text-align: left;
+}
+
+.fixed {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0%;
+  right: 0%;
+
+  height: 10vh;
+  width: 100%;
+
+  transition: all ease-out 1s;
+  background-color: var(--background-color-dark);
+  color: var(--text-color-light);
 }
 
 /* !There will be 2 methods to split content on the page */
@@ -279,6 +294,8 @@ div {
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  padding: 1rem;
 }
 
 .icon {
@@ -297,6 +314,7 @@ div {
     width: 100%;
   }
 }
+
 .icon img {
   width: 100px;
   height: 100px;
@@ -305,9 +323,6 @@ div {
 /* Contact section */
 
 /* Contact form */
-.contact {
-  margin-top: 2rem;
-}
 
 .contact-container {
   display: flex;
@@ -358,6 +373,14 @@ input[type="submit"]:hover {
   background-color: #45a049;
 }
 
+/* footer styling */
+.footer-container {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-green);
+
+  padding: 2rem;
+}
+
 /* Media queries */
 @media (min-width: 60em) {
   /* Splitting methods */
@@ -370,7 +393,7 @@ input[type="submit"]:hover {
   }
 
   #split > * + * {
-    margin-left: 3em;
+    margin-left: 1em;
   }
 
   #grid {
