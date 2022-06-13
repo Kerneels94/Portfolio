@@ -1,40 +1,76 @@
+"use strict";
 // Setting up the date so that it dynamically updates every year
 date = document.querySelector("#date");
-date.innerHTML = new Date().getFullYear();
-
+date.textContent = new Date().getFullYear();
 // Navigation bar functionality
 const navToggle = document.querySelector(".nav-toggle");
 const links = document.querySelector(".links");
 const scrollLinks = document.querySelectorAll(".scroll-links");
-
 navToggle.addEventListener("click", () => {
-  if (links.classList.contains("links-toggle")) {
-    links.classList.remove("links-toggle");
-  } else {
-    links.classList.add("links-toggle");
-  }
+    if (links.classList.contains("links-toggle")) {
+        links.classList.remove("links-toggle");
+    }
+    else {
+        links.classList.add("links-toggle");
+    }
 });
-
 links.addEventListener("click", () => {
-  if (links.classList.contains("links-toggle")) {
-    links.classList.remove("links-toggle");
-  }
+    if (links.classList.contains("links-toggle")) {
+        links.classList.remove("links-toggle");
+    }
 });
-
 //  Fixed navbar
-
 const nav = document.querySelector(".navbar");
-
 const projectsSection = document.querySelector(".projects");
-
 let projectSectionHeight = projectsSection.offsetTop - 500;
-
 const fixednav = () => {
-  if (window.scrollY > projectSectionHeight) {
-    nav.classList.add("fixed");
-  } else {
-    nav.classList.remove("fixed");
-  }
+    if (window.scrollY > projectSectionHeight) {
+        nav.classList.add("fixed");
+    }
+    else {
+        nav.classList.remove("fixed");
+    }
 };
-
 window.addEventListener("scroll", fixednav);
+// Slider
+const slides = document.querySelectorAll(".slide");
+const nextBtn = document.querySelector(".nextBtn");
+const prevBtn = document.querySelector(".prevBtn");
+slides.forEach(function (slide, index) {
+    slide.style.left = `${index * 100}%`;
+});
+let counter = 0;
+nextBtn.addEventListener("click", function () {
+    counter++;
+    carousel();
+});
+prevBtn.addEventListener("click", function () {
+    counter--;
+    carousel();
+});
+function carousel() {
+    // working with slides
+    // if (counter === slides.length) {
+    //   counter = 0;
+    // }
+    // if (counter < 0) {
+    //   counter = slides.length - 1;
+    // }
+    // working with buttons
+    if (counter < slides.length - 1) {
+        nextBtn.style.display = "block";
+    }
+    else {
+        nextBtn.style.display = "none";
+    }
+    if (counter > 0) {
+        prevBtn.style.display = "block";
+    }
+    else {
+        prevBtn.style.display = "none";
+    }
+    slides.forEach(function (slide) {
+        slide.style.transform = `translateX(-${counter * 100}%)`;
+    });
+}
+prevBtn.style.display = "none";

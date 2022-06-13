@@ -23,11 +23,13 @@
         <div class="logo">
           <h2>Corrie Botha</h2>
         </div>
-        <ul class="links">
-          <li class="scroll-links"><a href="#projects">Projects</a></li>
-          <li class="scroll-links"><a href="#why">About</a></li>
-          <li class="scroll-links"><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="links">
+          <ul>
+            <li class="scroll-links"><a href="#projects">Projects</a></li>
+            <li class="scroll-links"><a href="#why">About</a></li>
+            <li class="scroll-links"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
         <a href="#" class="contact-btn btn">Contact me</a>
         <!-- Bar -->
         <a class="nav-toggle">
@@ -35,8 +37,8 @@
         </a>
       </nav>
       <!-- Banner -->
-      <div class="banner" id="grid">
-        <div class="container">
+      <div class="banner">
+        <div class="banner-container">
           <h1 class="banner-heading-container">Front-End Developer</h1>
           <!-- I used inline styles explicitly style a few words, The styling of the words will never change-->
           <!-- Readability might be an issue due to the way prettier formats the code -->
@@ -48,7 +50,7 @@
                 background-color: #262626;
                 padding: 0.4em;
               "
-              ><b>Code</b></span
+              ><b>code</b></span
             >
             to
             <span
@@ -74,73 +76,49 @@
           </p>
           <a href="#" class="btn">Learn more!</a>
         </div>
-        <div class="banner2">
-          <p>"Persistance === ${A new yourney}"</p>
-        </div>
       </div>
     </header>
 
     <main>
       <!-- Projects -->
-      <section class="container projects">
-        <div class="text-container-center">
+      <section class="projects">
+        <div class="text-container projects-header">
           <h1>My Projects<span>&#8595;</span></h1>
         </div>
-        <div class="cards-container" id="split">
-          <div class="card">
-            <h2>Jpb-Maintenance</h2>
-            <div class="card-image">
-              <img src="./images/pa-site-2.JPG" alt="image of the website" />
-            </div>
-            <p>They specialize in Steelwork</p>
-            <button class="btn">
-              <a href="https://www.jpbmainetance.co.za">Visit site</a>
-            </button>
-            <button class="btn"><a href="#">Source Code</a></button>
+        <div class="slider-container">
+          <div class="slide">
+            <img
+              src="./images/pa-new-site.JPG"
+              alt="slide-image"
+              class="slide-img"
+            />
           </div>
 
-          <div class="card">
-            <h2>Jpb-Maintenance</h2>
-            <div class="card-image">
-              <img src="./images/pa-site-2.JPG" alt="image of the website" />
-            </div>
-            <p>They specialize in Steelwork</p>
-            <button class="btn">
-              <a href="https://www.jpbmainetance.co.za">Visit site</a>
-            </button>
-            <button class="btn"><a href="#">Source Code</a></button>
+          <div class="slide">
+            <img
+              src="./images/new-coffee-shop.JPG"
+              alt="slide-image"
+              class="slide-img"
+            />
           </div>
 
-          <div class="card">
-            <h2>Jpb-Maintenance</h2>
-            <div class="card-image">
-              <img src="./images/pa-site-2.JPG" alt="image of the website" />
-            </div>
-            <p>They specialize in Steelwork</p>
-            <button class="btn">
-              <a href="https://www.jpbmainetance.co.za">Visit site</a>
-            </button>
-            <button class="btn"><a href="#">Source Code</a></button>
+          <div class="slide">
+            <img
+              src="./images/new-robots.JPG"
+              alt="slide-image"
+              class="slide-img"
+            />
           </div>
 
-          <!-- 
-          <div class="project-text-container">
-            <h1>All projects</h1>
-            <p>If you want to see all the projects i have worked on</p>
-            <button class="btn"><a href="#">Click Me</a></button>
-          </div> -->
-
-          <div class="card">
-            <h2>Jpb-Maintenance</h2>
-            <div class="card-image">
-              <img src="./images/pa-site-2.JPG" alt="image of the website" />
-            </div>
-            <p>They specialize in Steelwork</p>
-            <button class="btn">
-              <a href="https://www.jpbmainetance.co.za">Visit site</a>
-            </button>
-            <button class="btn"><a href="#">Source Code</a></button>
+          <div class="slide">
+            <img
+              src="./images/new-whisper-dev.JPG"
+              alt="slide-image"
+              class="slide-img"
+            />
           </div>
+          <a class="prevBtn">&#10094;</a>
+          <a class="nextBtn">&#10095;</a>
         </div>
       </section>
 

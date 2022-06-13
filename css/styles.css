@@ -9,6 +9,8 @@
   --text-color-green: #90ee90;
   /* Shadow */
   /* Padding */
+
+  --transition: all 0.3s linear;
 }
 
 html {
@@ -49,13 +51,12 @@ h3 {
   line-height: 1.5;
   margin: 1em 0;
   text-align: center;
-  font-size: 2em;
 }
 
 p {
   font-size: 1.5em;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
 header {
@@ -69,10 +70,6 @@ section {
   margin: 2rem 0;
 }
 
-div {
-  margin: 0.5rem 0;
-}
-
 .btn {
   display: inline-block;
   background-color: #262626;
@@ -83,7 +80,7 @@ div {
 }
 
 .btn:hover {
-  background-color: rgba(238, 98, 4, 0.5);
+  background-color: rgba(12, 138, 255, 0.5);
   color: var(--text-color-light);
 }
 
@@ -104,44 +101,66 @@ div {
 
 .nav-toggle:hover {
   transform: rotate(360deg);
-  transition: all ease-in 0.8s;
+  transition: all 1s;
 }
 
 .links {
   height: 0;
   overflow: hidden;
-  padding: 1rem;
   display: none;
-  transition: all ease-in 0.5s;
+}
+
+.links:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .links a {
-  color: var(--text-color-green);
-  font-size: 1rem;
+  color: var(--text-color-light);
+  font-size: 1.2rem;
   text-transform: capitalize;
-  padding: 0.5rem 1rem;
+  padding: 1rem 0;
+}
+
+.links a:hover {
+  padding: 1rem;
+  transition: all ease-in-out 0.25s;
+  color: var(--text-color-light);
+  box-shadow: 3px 3px 10px 5px var(--text-color-green);
+}
+
+.scroll-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.scroll-links:hover {
+  color: var(--text-color-dark);
 }
 
 /* Toggle the navbar */
 .links-toggle {
-  background-color: var(--background-color-dark);
-  color: var(--background-color-light);
-  height: 250px;
+  transition: all ease 3s;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--background-color-dark);
+  height: 400px;
   width: 100%;
   position: absolute;
-  left: 0;
-  top: 12%;
+  left: 0%;
+  right: -100%;
+  top: 10%;
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  transition: all ease-in 0.5s;
+  justify-content: center;
 }
 
 .logo {
   color: var(--text-color-light);
-  padding-top: 1.5em;
+  font-size: 1.4rem;
 }
 
 /* banner  for the header*/
@@ -165,11 +184,6 @@ div {
   line-height: 2;
   font-size: 1.2em;
 }
-/* Second banner for the header */
-.banner2 {
-  color: white;
-  text-align: left;
-}
 
 .fixed {
   z-index: 100;
@@ -182,7 +196,7 @@ div {
   width: 100%;
 
   transition: all ease-out 1s;
-  background-color: var(--background-color-dark);
+  background-color: rgba(0, 0, 0, 0.5);
   color: var(--text-color-light);
 }
 
@@ -250,42 +264,75 @@ div {
   font-size: 48px;
 }
 
-/* Section-A-Projects - Cards section*/
+/* Coursel with projects */
 
-.cards-container {
-  margin: 2rem 0;
+.projects {
   padding: 2rem;
 }
-
-.card {
-  box-shadow: 20px 10px 15px #262626;
-  width: 90%;
-  height: 50%;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  border-radius: 2em;
-  background-color: var(--background-color-dark);
-  color: var(--background-color-light);
-  transform: skewY(10deg);
+.slider-container {
+  width: 80vw;
+  margin: 0 auto;
+  height: 55vh;
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  margin-top: 2rem;
 }
 
-.card:hover {
-  box-shadow: 20px 10px 10px lightgreen;
-  color: var(--background-color-light);
-}
-
-.card a {
-  text-align: center;
-  display: block;
-  color: lightgreen;
-}
-
-.card-image {
+.slide {
+  position: absolute;
   width: 100%;
-  height: auto;
-  background-size: cover;
+  height: 100%;
+  transition: all 0.25s ease-in-out;
+  text-align: center;
+}
+
+.slide-img {
+  height: 100%;
+  width: 100%;
   background-position: center;
-  border-radius: 15%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+.prevBtn {
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  font-size: 2em;
+  cursor: pointer;
+  color: var(--text-color-light);
+}
+
+.nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  font-size: 2em;
+  cursor: pointer;
+  color: var(--text-color-light);
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+  color: var(--hover-links-dark);
+}
+
+@media screen and (min-width: 576px) {
+  .slider-container {
+    height: 45vh;
+  }
+}
+@media screen and (min-width: 768px) {
+  .slider-container {
+    height: 55vh;
+  }
+}
+@media screen and (min-width: 992px) {
+  .slider-container {
+    height: 65vh;
+  }
 }
 
 /* Skills section */
@@ -461,5 +508,11 @@ input[type="submit"]:hover {
 
   .contact-container p {
     font-size: 0.8em;
+  }
+
+  /* Skills section */
+
+  .projects-header h1 {
+    font-size: 2em;
   }
 }
