@@ -1,11 +1,11 @@
 // Setting up the date so that it dynamically updates every year
-date = document.querySelector("#date");
+const date: any = document.querySelector("#date");
 date.textContent = new Date().getFullYear();
 
 // Navigation bar functionality
-const navToggle = document.querySelector(".nav-toggle");
-const links = document.querySelector(".links");
-const scrollLinks = document.querySelectorAll(".scroll-links");
+const navToggle: any = document.querySelector(".nav-toggle");
+const links: any = document.querySelector(".links");
+const scrollLinks: any = document.querySelectorAll(".scroll-links");
 
 navToggle.addEventListener("click", () => {
   if (links.classList.contains("links-toggle")) {
@@ -23,9 +23,9 @@ links.addEventListener("click", () => {
 
 //  Fixed navbar
 
-const nav = document.querySelector(".navbar");
+const nav: any = document.querySelector(".navbar");
 
-const projectsSection = document.querySelector(".projects");
+const projectsSection: any = document.querySelector(".projects");
 
 let projectSectionHeight = projectsSection.offsetTop - 500;
 
@@ -42,9 +42,9 @@ window.addEventListener("scroll", fixednav);
 // Slider
 
 const slides = document.querySelectorAll(".slide");
-const nextBtn = document.querySelector(".nextBtn");
-const prevBtn = document.querySelector(".prevBtn");
-slides.forEach(function (slide, index) {
+const nextBtn: any = document.querySelector(".nextBtn");
+const prevBtn: any = document.querySelector(".prevBtn");
+slides.forEach(function (slide: any, index) {
   slide.style.left = `${index * 100}%`;
 });
 let counter = 0;
@@ -79,7 +79,7 @@ function carousel() {
   } else {
     prevBtn.style.display = "none";
   }
-  slides.forEach(function (slide) {
+  slides.forEach(function (slide: any) {
     slide.style.transform = `translateX(-${counter * 100}%)`;
   });
 }
