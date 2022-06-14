@@ -60,15 +60,6 @@ prevBtn.addEventListener("click", function () {
 });
 
 function carousel() {
-  // working with slides
-  // if (counter === slides.length) {
-  //   counter = 0;
-  // }
-  // if (counter < 0) {
-  //   counter = slides.length - 1;
-  // }
-  // working with buttons
-
   if (counter < slides.length - 1) {
     nextBtn.style.display = "block";
   } else {
@@ -85,3 +76,60 @@ function carousel() {
 }
 
 prevBtn.style.display = "none";
+
+// I want to create
+
+const elements = document.querySelector(".animated-blocks");
+
+for (let i = 0; i <= 80; i++) {
+  const blocks = document.createElement("div");
+  blocks.classList.add("block");
+  elements.appendChild(blocks);
+}
+
+function animatedBlocks() {
+  anime({
+    targets: ".block",
+    translateX: function () {
+      return anime.random(-1200, 1200);
+    },
+    translateY: function () {
+      return anime.random(-500, 500);
+    },
+    scale: function () {
+      return anime.random(1, 6);
+    },
+    duration: 6000,
+    easing: "easeInOutQuad",
+    delay: anime.stagger(0.5),
+    complete: animatedBlocks,
+  });
+}
+
+animatedBlocks();
+
+// Animated header words
+
+const animateWord = () => {
+  anime({
+    targets: ".animated-text",
+    translateX: {
+      value: 10,
+      duration: 1000,
+    },
+    rotate: {
+      value: 360,
+      duration: 1000,
+      easing: "easeInOutSine",
+    },
+    scale: {
+      value: 1,
+      duration: 1600,
+      delay: 800,
+      easing: "easeInOutQuart",
+    },
+    delay: 250, // All properties except 'scale' inherit 250ms delay
+  });
+};
+
+animateWord();

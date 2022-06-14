@@ -58,12 +58,12 @@ p {
   padding: 1rem 2rem;
 }
 
-header {
+/* header {
   background: linear-gradient(180deg, rgba(235, 82, 5, 0.2), rgba(0, 0, 0, 0.5)),
     url("/images/background-3.jpg") center/cover no-repeat;
   min-height: 100vh;
   width: 100%;
-}
+} */
 
 section {
   margin: 2rem 0;
@@ -91,12 +91,61 @@ section {
 /* Utility classes */
 
 /* Header */
+header {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  min-height: 120vh;
+  width: 100%;
+  background-color: #262626;
+}
+.block {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 50px;
+  height: 50px;
+  box-shadow: 10px 10px 50px rgba(119, 31, 31, 0.975);
+  position: absolute;
+  border-radius: 5px;
+}
+
+.animated-blocks {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.animated-text {
+  position: absolute;
+  z-index: 100;
+}
+
+.animated-text h1 {
+  font-size: 3em;
+  color: var(--text-color-light);
+}
+
+.animated-text h2 {
+  font-size: 2em;
+  color: var(--text-color-light);
+}
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
   padding: 2rem;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .nav-toggle:hover {

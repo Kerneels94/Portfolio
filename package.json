@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@splidejs/splide": "^4.0.2",
+    "animejs": "^3.2.1",
     "scss": "^0.2.4",
     "tsc": "^2.0.4"
   }
