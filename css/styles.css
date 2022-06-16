@@ -123,15 +123,16 @@ header {
 .animated-text {
   position: absolute;
   z-index: 100;
+  padding: 1rem;
 }
 
 .animated-text h1 {
-  font-size: 3em;
+  font-size: 2em;
   color: var(--text-color-light);
 }
 
 .animated-text h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   color: var(--text-color-light);
 }
 
@@ -158,20 +159,16 @@ header {
   display: none;
 }
 
-.links:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 .links a {
   color: var(--text-color-light);
   font-size: 1.2rem;
   text-transform: capitalize;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
+  margin: 1rem;
   cursor: pointer;
 }
 
 .links a:hover {
-  padding: 1rem;
   transition: all ease-in-out 0.25s;
   color: var(--text-color-light);
   box-shadow: 3px 3px 10px 5px var(--text-color-green);
@@ -192,7 +189,6 @@ header {
 
 /* Toggle the navbar */
 .links-toggle {
-  transition: all ease 3s;
   font-size: 1.5rem;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.5);
@@ -201,8 +197,8 @@ header {
   width: 100%;
   position: absolute;
   left: 0%;
-  right: -100%;
-  top: 10%;
+  right: 0;
+  top: 100%;
   text-align: center;
   display: flex;
   align-items: center;
@@ -270,12 +266,13 @@ header {
   margin-inline: auto;
   overflow: hidden;
 }
+
 /* Text containers */
 .skills-text-container h1 {
   font-size: 4em;
 }
 .skills-text-container p {
-  font-size: 1.3em;
+  font-size: 1.4em;
   padding: 0 2rem;
   line-height: 1.8;
 }
@@ -284,21 +281,14 @@ header {
   font-size: 2em;
 }
 
-.text-container-center {
-  text-align: center;
-  margin-top: 1em;
+.contact-container-text h1 {
+  font-size: 4rem;
 }
 
-.text-container-left {
-  text-align: left;
-  color: #fff;
-  margin-top: 1em;
-}
-
-.text-container-right {
-  text-align: right;
-  color: #fff;
-  margin-top: 1em;
+.contact-container-text p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  padding: 0 2rem;
 }
 
 .footer-text-container p {
@@ -401,7 +391,7 @@ header {
 .icon-list .icon {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 
   padding: 1rem;
 }
@@ -479,6 +469,13 @@ input[type="submit"] {
 /* When moving the mouse over the submit button, add a darker green color */
 input[type="submit"]:hover {
   background-color: #45a049;
+}
+
+.contact-container-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 /* footer styling */

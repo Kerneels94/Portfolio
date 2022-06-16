@@ -2,7 +2,7 @@
 const date: any = document.querySelector("#date");
 date.textContent = new Date().getFullYear();
 
-// Navigation bar functionality
+// Nav toggle
 const navToggle: any = document.querySelector(".nav-toggle");
 const links: any = document.querySelector(".links");
 const scrollLinks: any = document.querySelectorAll(".scroll-links");
@@ -77,11 +77,11 @@ function carousel() {
 
 prevBtn.style.display = "none";
 
-// I want to create
+// Animated header
 
-const elements = document.querySelector(".animated-blocks");
+const elements: any = document.querySelector(".animated-blocks");
 
-for (let i = 0; i <= 80; i++) {
+for (let i = 0; i <= 50; i++) {
   const blocks = document.createElement("div");
   blocks.classList.add("block");
   elements.appendChild(blocks);
@@ -107,29 +107,3 @@ function animatedBlocks() {
 }
 
 animatedBlocks();
-
-// Animated header words
-
-const animateWord = () => {
-  anime({
-    targets: ".animated-text",
-    translateX: {
-      value: 10,
-      duration: 1000,
-    },
-    rotate: {
-      value: 360,
-      duration: 1000,
-      easing: "easeInOutSine",
-    },
-    scale: {
-      value: 1,
-      duration: 1600,
-      delay: 800,
-      easing: "easeInOutQuart",
-    },
-    delay: 250, // All properties except 'scale' inherit 250ms delay
-  });
-};
-
-animateWord();
