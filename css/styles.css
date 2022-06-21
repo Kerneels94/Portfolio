@@ -103,10 +103,6 @@ header {
   width: 100%;
 }
 
-.nav-toggle:hover {
-  transition: all 1s;
-}
-
 .links {
   height: 0;
   overflow: hidden;
