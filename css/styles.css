@@ -50,6 +50,7 @@ h3 {
   line-height: 1.5;
   margin: 0.5em 0;
   text-align: center;
+  padding: 0.1rem 2rem;
 }
 
 p {
@@ -58,15 +59,8 @@ p {
   padding: 1rem 2rem;
 }
 
-/* header {
-  background: linear-gradient(180deg, rgba(235, 82, 5, 0.2), rgba(0, 0, 0, 0.5)),
-    url("/images/background-3.jpg") center/cover no-repeat;
-  min-height: 100vh;
-  width: 100%;
-} */
-
 section {
-  margin: 2rem 0;
+  margin: 7em 0;
 }
 
 .btn {
@@ -79,7 +73,7 @@ section {
 }
 
 .btn:hover {
-  background-color: rgba(12, 138, 255, 0.5);
+  box-shadow: 3px 3px 10px 5px var(--text-color-green);
   color: var(--text-color-light);
 }
 
@@ -92,48 +86,10 @@ section {
 
 /* Header */
 header {
-  position: relative;
-  overflow: hidden;
-  display: grid;
-  place-items: center;
-  min-height: 120vh;
+  background: linear-gradient(40deg, rgba(104, 3, 3, 0.2), rgba(0, 0, 0, 0.5)),
+    url(../images/skulls2.jpg) center/cover no-repeat;
   width: 100%;
-  background-color: #262626;
-}
-.block {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 50px;
-  height: 50px;
-  box-shadow: 10px 10px 50px rgba(119, 31, 31, 0.975);
-  position: absolute;
-  border-radius: 5px;
-}
-
-.animated-blocks {
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.animated-text {
-  position: absolute;
-  z-index: 100;
-  padding: 1rem;
-}
-
-.animated-text h1 {
-  font-size: 2em;
-  color: var(--text-color-light);
-}
-
-.animated-text h2 {
-  font-size: 1.5em;
-  color: var(--text-color-light);
+  min-height: 110vh;
 }
 
 .navbar {
@@ -141,12 +97,10 @@ header {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  padding: 2rem;
+  padding: 2em;
   position: absolute;
   z-index: 100;
-  top: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
 }
 
 .nav-toggle:hover {
@@ -169,7 +123,7 @@ header {
 }
 
 .links a:hover {
-  transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.15s;
   color: var(--text-color-light);
   box-shadow: 3px 3px 10px 5px var(--text-color-green);
 }
@@ -191,7 +145,7 @@ header {
 .links-toggle {
   font-size: 1.5rem;
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   color: var(--background-color-dark);
   height: 400px;
   width: 100%;
@@ -222,33 +176,37 @@ header {
   color: var(--text-color-light);
 }
 
-.logo {
-  color: var(--text-color-light);
-  font-size: 1.2rem;
+.logo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 125px;
 }
 
 /* banner  for the header*/
 .banner {
-  min-height: 80vh;
+  min-height: 110vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 0 2rem;
 }
 
 .banner p {
   color: var(--text-color-light);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
 }
 
-.banner-heading-container {
-  background-color: var(--background-color-orangered);
-  display: inline-block;
-  color: var(--text-color-light);
-  line-height: 2;
-}
-
-.banner-heading-container h1 {
+.banner h1 {
   font-size: 2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--text-color-light);
+}
+
+.banner2 p {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* !There will be 2 methods to split content on the page */
@@ -316,16 +274,11 @@ header {
 
 /* Coursel with projects */
 
-.projects {
-  padding: 2rem;
-}
-
 .slider-container {
-  width: 80vw;
+  width: 85vw;
   margin: 0 auto;
-  height: 55vh;
+  height: 65vh;
   position: relative;
-  border-radius: 2rem;
   overflow: hidden;
   margin-top: 2rem;
 }
@@ -370,6 +323,15 @@ header {
   color: var(--hover-links-dark);
 }
 
+.slide-btn {
+  position: absolute;
+  z-index: 9999;
+  top: 80%;
+  left: 10%;
+  right: 10%;
+  margin: 0 auto;
+}
+
 @media (min-width: 50em) {
   .slider-container {
     height: 50vh;
@@ -403,12 +365,12 @@ header {
 
 @keyframes slidein {
   from {
-    margin-right: 100%;
-    width: 300%;
+    margin-left: -300%;
+    width: 100%;
   }
 
   to {
-    margin-right: 50%;
+    margin-left: 0;
     width: 100%;
   }
 }
@@ -449,13 +411,13 @@ input[type="text"],
 select,
 textarea {
   border: none;
-  width: 70%; /* Full width */
-  padding: 2em; /* Some padding */
-  border-radius: 5px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  width: 70%;
+  padding: 2em;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
   box-shadow: 5px 5px 20px 5px rgb(8, 246, 0, 0.6);
 }
 
@@ -487,7 +449,7 @@ input[type="submit"]:hover {
 }
 
 /* Media queries */
-@media (min-width: 60em) {
+@media (min-width: 65em) {
   /* Splitting methods */
   #split {
     flex-direction: row;
@@ -498,7 +460,7 @@ input[type="submit"]:hover {
   }
 
   #split > * + * {
-    margin-left: 1em;
+    margin-left: 2em;
   }
 
   #grid {
@@ -535,7 +497,7 @@ input[type="submit"]:hover {
   }
 
   .scroll-links a:hover {
-    transition: all ease-in 0.5s;
+    transition: all ease-in 0.25s;
   }
 
   .contact-btn {
@@ -556,5 +518,20 @@ input[type="submit"]:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  }
+
+  /* Banner */
+  .banner {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .banner2 {
+    padding: 1em;
+  }
+
+  .banner3 {
+    padding: 1em;
   }
 }

@@ -76,34 +76,3 @@ function carousel() {
 }
 
 prevBtn.style.display = "none";
-
-// Animated header
-
-const elements: any = document.querySelector(".animated-blocks");
-
-for (let i = 0; i <= 50; i++) {
-  const blocks = document.createElement("div");
-  blocks.classList.add("block");
-  elements.appendChild(blocks);
-}
-
-function animatedBlocks() {
-  anime({
-    targets: ".block",
-    translateX: function () {
-      return anime.random(-1200, 1200);
-    },
-    translateY: function () {
-      return anime.random(-500, 500);
-    },
-    scale: function () {
-      return anime.random(1, 6);
-    },
-    duration: 6000,
-    easing: "easeInOutQuad",
-    delay: anime.stagger(0.5),
-    complete: animatedBlocks,
-  });
-}
-
-animatedBlocks();
