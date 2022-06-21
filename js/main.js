@@ -1,28 +1,27 @@
-"use strict";
 // Setting up the date so that it dynamically updates every year
-const date = document.querySelector("#date");
+var date = document.querySelector("#date");
 date.textContent = new Date().getFullYear();
 // Nav toggle
-const navToggle = document.querySelector(".nav-toggle");
-const links = document.querySelector(".links");
-const scrollLinks = document.querySelectorAll(".scroll-links");
-navToggle.addEventListener("click", () => {
+var navToggle = document.querySelector(".nav-toggle");
+var links = document.querySelector(".links");
+var scrollLinks = document.querySelectorAll(".scroll-links");
+navToggle.addEventListener("click", function () {
   if (links.classList.contains("links-toggle")) {
     links.classList.remove("links-toggle");
   } else {
     links.classList.add("links-toggle");
   }
 });
-links.addEventListener("click", () => {
+links.addEventListener("click", function () {
   if (links.classList.contains("links-toggle")) {
     links.classList.remove("links-toggle");
   }
 });
 //  Fixed navbar
-const nav = document.querySelector(".navbar");
-const projectsSection = document.querySelector(".projects");
-let projectSectionHeight = projectsSection.offsetTop - 500;
-const fixednav = () => {
+var nav = document.querySelector(".navbar");
+var projectsSection = document.querySelector(".projects");
+var projectSectionHeight = projectsSection.offsetTop - 500;
+var fixednav = function () {
   if (window.scrollY > projectSectionHeight) {
     nav.classList.add("fixed");
   } else {
@@ -31,13 +30,13 @@ const fixednav = () => {
 };
 window.addEventListener("scroll", fixednav);
 // Slider
-const slides = document.querySelectorAll(".slide");
-const nextBtn = document.querySelector(".nextBtn");
-const prevBtn = document.querySelector(".prevBtn");
+var slides = document.querySelectorAll(".slide");
+var nextBtn = document.querySelector(".nextBtn");
+var prevBtn = document.querySelector(".prevBtn");
 slides.forEach(function (slide, index) {
-  slide.style.left = `${index * 100}%`;
+  slide.style.left = "".concat(index * 100, "%");
 });
-let counter = 0;
+var counter = 0;
 nextBtn.addEventListener("click", function () {
   counter++;
   carousel();
@@ -58,7 +57,7 @@ function carousel() {
     prevBtn.style.display = "none";
   }
   slides.forEach(function (slide) {
-    slide.style.transform = `translateX(-${counter * 100}%)`;
+    slide.style.transform = "translateX(-".concat(counter * 100, "%)");
   });
 }
 prevBtn.style.display = "none";
