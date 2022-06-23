@@ -86,7 +86,7 @@ section {
 
 /* Header */
 header {
-  background: linear-gradient(40deg, rgba(104, 3, 3, 0.2), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(40deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
     url(../images/skulls2.jpg) center/cover no-repeat;
   width: 100%;
   min-height: 110vh;
@@ -190,7 +190,7 @@ header {
 
 .banner p {
   color: var(--text-color-light);
-  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: rgba(0, 0, 0, 0.8); */
   padding: 1rem;
 }
 
@@ -202,7 +202,7 @@ header {
 
 .banner2 p {
   padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: rgba(0, 0, 0, 0.8); */
 }
 
 /* !There will be 2 methods to split content on the page */
@@ -251,7 +251,6 @@ header {
 
 /* Material icons */
 .material-icons {
-  color: var(--background-color-light);
   cursor: pointer;
 }
 
@@ -273,7 +272,7 @@ header {
 .slider-container {
   width: 85vw;
   margin: 0 auto;
-  height: 65vh;
+  height: 55vh;
   position: relative;
   overflow: hidden;
   margin-top: 2rem;
@@ -330,17 +329,19 @@ header {
 
 @media (min-width: 50em) {
   .slider-container {
-    height: 50vh;
+    height: 55vh;
   }
 }
 @media (min-width: 60em) {
   .slider-container {
     height: 60vh;
+    width: 60vw;
   }
 }
 @media (min-width: 70em) {
   .slider-container {
     height: 70vh;
+    width: 60vw;
   }
 }
 
@@ -380,55 +381,18 @@ header {
 
 /* Contact form */
 
-.contact-container {
+.social-links img {
+  width: 50px;
+  height: 50px;
+}
+
+.social-links {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  gap: 1em;
+  padding: 1em 0;
 }
-
-.form-control {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-
-  background-color: var(--background-color-light);
-  color: #262626;
-  margin: 2em;
-  padding: 2em;
-  box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 1);
-  border-radius: 10%;
-  border: none;
-}
-
-/* Style inputs with type="text", select elements and textareas */
-input[type="text"],
-select,
-textarea {
-  border: none;
-  width: 70%;
-  padding: 2em;
-  border-radius: 5px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  box-shadow: 5px 5px 20px 5px rgb(8, 246, 0, 0.6);
-}
-
-/* Style the submit button with a specific background color etc */
-input[type="submit"] {
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-/* When moving the mouse over the submit button, add a darker green color */
-input[type="submit"]:hover {
-  background-color: #45a049;
-}
-
 .contact-container-text {
   display: flex;
   align-items: center;

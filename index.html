@@ -48,7 +48,7 @@
         </div>
         <div class="banner2">
           <p>
-            I love building a designing websites thats visually pleasing and
+            I love building and designing websites thats visually pleasing and
             focuses on providing the user with<br />
             a "Seamless" experience that keeps them coming back for more.
           </p>
@@ -58,6 +58,10 @@
 
     <main>
       <!-- Projects -->
+      <!-- 
+        Adding rel="noopener noreferrer" to prevent tabnabbing
+        (Exploit that uses a browsers defualt behavior to gain partial acccess through the window.object) 
+      -->
       <section class="projects" id="projects">
         <div class="text-container-projects projects-header">
           <h1>My Projects<span>&#8595;</span></h1>
@@ -70,7 +74,13 @@
               class="slide-img"
             />
             <div class="slide-btn">
-              <a href="#" class="btn slide-btn">View Site</a>
+              <a
+                href="https://www.jpbmaintenance.co.za"
+                class="btn slide-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Site</a
+              >
             </div>
           </div>
 
@@ -80,7 +90,13 @@
               alt="slide-image"
               class="slide-img"
             />
-            <a href="#" class="btn slide-btn">View Site</a>
+            <a
+              href="https://github.com/Kerneels94/Coffee-Landing-page.git"
+              class="btn slide-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View Site</a
+            >
           </div>
 
           <div class="slide">
@@ -89,7 +105,13 @@
               alt="slide-image"
               class="slide-img"
             />
-            <a href="#" class="btn slide-btn">View Site</a>
+            <a
+              href="https://github.com/Kerneels94/Gen-Robotics-landing-page.git"
+              class="btn slide-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View Site</a
+            >
           </div>
 
           <div class="slide">
@@ -98,7 +120,13 @@
               alt="slide-image"
               class="slide-img"
             />
-            <a href="#" class="btn slide-btn">View Site</a>
+            <a
+              href="https://github.com/Kerneels94/Wisper-Dev-landing-page.git"
+              target="_blank"
+              rel="noopenernoreferrer "
+              class="btn slide-btn"
+              >View Site</a
+            >
           </div>
           <a class="prevBtn">&#10094;</a>
           <a class="nextBtn">&#10095;</a>
@@ -139,32 +167,35 @@
       </section>
 
       <!-- Contact -->
-      <section class="contact container" id="grid">
-        <div class="contact-container2" id="contact">
-          <form action="contact.php">
-            <div class="form-control">
-              <label for="name">Name</label>
-              <input type="text" id="name" placeholder="Name" />
-
-              <label for="email">Email</label>
-              <input type="text" id="email" placeholder="Email" />
-
-              <label for="message">Message</label>
-              <textarea
-                name="message"
-                id="message"
-                placeholder="Message"
-              ></textarea>
-              <input type="submit" value="submit" class="btn" />
-            </div>
-          </form>
-        </div>
+      <section class="contact container">
+        <div id="contact"></div>
         <div class="contact-container-text">
-          <h1><span class="arrow">&#8592;</span>Lets Connect</h1>
+          <h1>Lets Connect</h1>
           <p>
             If you want to get in touch with me or have any qeustions kindly
-            visit my Socials or directly contact me
+            visit my Socials or directly contact me at
+            <span class="email">corriebotha64@gmail.com</span>
           </p>
+        </div>
+        <div class="social-links">
+          <span>
+            <a
+              href="https://www.linkedin.com/in/cornelius-botha94"
+              target="_blank"
+              rel="noopenernoreferrer "
+            >
+              <img src="./images/linkiden.png" alt="linkiden logo" />
+            </a>
+          </span>
+          <span>
+            <a
+              href="https://github.com/Kerneels94"
+              target="_blank"
+              rel="noopenernoreferrer "
+            >
+              <img src="./images/github.png" alt="linkiden logo" />
+            </a>
+          </span>
         </div>
       </section>
     </main>
