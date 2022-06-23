@@ -190,8 +190,6 @@ header {
 
 .banner p {
   color: var(--text-color-light);
-  /* background-color: rgba(0, 0, 0, 0.8); */
-  padding: 1rem;
 }
 
 .banner h1 {
@@ -202,7 +200,6 @@ header {
 
 .banner2 p {
   padding: 2rem;
-  /* background-color: rgba(0, 0, 0, 0.8); */
 }
 
 /* !There will be 2 methods to split content on the page */
@@ -227,8 +224,8 @@ header {
 }
 .skills-text-container p {
   font-size: 1.4em;
-  padding: 0 2rem;
-  line-height: 1.8;
+  padding: 0 2em;
+  line-height: 1.4;
 }
 
 .text-container-projects {
@@ -241,7 +238,7 @@ header {
 
 .contact-container-text p {
   font-size: 1.4rem;
-  line-height: 1.8;
+  line-height: 1.4;
   padding: 0 2rem;
 }
 
@@ -406,6 +403,10 @@ header {
   color: var(--text-color-green);
 
   padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 /* Media queries */
@@ -420,7 +421,7 @@ header {
   }
 
   #split > * + * {
-    margin-left: 2em;
+    margin-left: 1em;
   }
 
   #grid {
@@ -463,6 +464,7 @@ header {
   .contact-btn {
     display: inline-block;
   }
+
   /* Text containers */
 
   .skills-text-container {
@@ -472,26 +474,20 @@ header {
     flex-direction: column;
   }
 
-  /* Contact form  */
-  .contact-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  .skills-text-container p {
+    font-size: 1.4em;
+    padding: 0 4em;
   }
 
   /* Banner */
   .banner {
     position: absolute;
     left: 0;
+    right: 50%;
     top: 0;
   }
 
-  .banner2 {
-    padding: 1em;
-  }
-
-  .banner3 {
-    padding: 1em;
+  .banner2 p {
+    padding: 1em 3em;
   }
 }
