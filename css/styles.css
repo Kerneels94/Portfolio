@@ -331,14 +331,12 @@ header {
 }
 @media (min-width: 60em) {
   .slider-container {
-    height: 60vh;
     width: 60vw;
   }
 }
 @media (min-width: 70em) {
   .slider-container {
     height: 70vh;
-    width: 60vw;
   }
 }
 
