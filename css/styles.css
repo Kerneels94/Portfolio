@@ -223,26 +223,26 @@ header {
   font-size: 4em;
 }
 .skills-text-container p {
-  font-size: 1.4em;
+  font-size: 1.2em;
   padding: 0 2em;
   line-height: 1.4;
 }
-
+/* 
 .text-container-projects {
   font-size: 2em;
-}
+} */
 
 .contact-container-text h1 {
   font-size: 4rem;
 }
 
 .contact-container-text p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.4;
   padding: 0 2rem;
 }
 
-.footer-text-container p {
+.footer-text-container {
   padding: 2rem;
 }
 
@@ -473,7 +473,7 @@ header {
   }
 
   .skills-text-container p {
-    font-size: 1.4em;
+    font-size: 1.2em;
     padding: 0 4em;
   }
 
