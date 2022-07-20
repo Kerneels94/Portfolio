@@ -30,7 +30,6 @@ body {
 img {
   width: 100%;
   display: block;
-  opacity: 1;
 }
 
 li {
@@ -48,7 +47,6 @@ h1,
 h2,
 h3 {
   line-height: 1.5;
-  margin: 0.5em 0;
   text-align: center;
   padding: 0.1rem 2rem;
 }
@@ -60,13 +58,13 @@ p {
 }
 
 section {
-  margin: 7em 0;
+  padding: 7rem 0;
 }
 
 .btn {
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 1rem 3rem;
+  padding: 1em;
   cursor: pointer;
   color: var(--text-color-green);
   border: none;
@@ -96,64 +94,50 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row;
-  padding: 2em;
-  position: absolute;
-  z-index: 100;
-  width: 100%;
+  padding: 1rem;
 }
 
 .links {
   height: 0;
   overflow: hidden;
-  display: none;
 }
 
 .links a {
   color: var(--text-color-light);
-  font-size: 1.2rem;
-  text-transform: capitalize;
-  padding: 1rem 1rem;
-  margin: 1rem;
-  cursor: pointer;
+  font-size: 1rem;
+  /* text-transform: capitalize; */
+  letter-spacing: 0.2em;
+  display: block;
+  padding: 0.5rem 1rem;
 }
 
 .links a:hover {
-  transition: all ease-in-out 0.15s;
-  color: var(--text-color-light);
-  box-shadow: 3px 3px 10px 5px var(--text-color-green);
-}
-
-.scroll-links > * {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  cursor: pointer;
-  padding: 1em;
-}
-
-.scroll-links:hover {
+  transition: all ease-in-out 120ms;
   color: var(--text-color-dark);
+  box-shadow: 3px 3px 10px 5px var(--text-color-green);
+  background-color: #90ee90;
+}
+
+/* Nav toggle button */
+.nav-toggle:hover {
+  transform: rotate(90deg);
+  transition: transform 150ms ease-in;
 }
 
 /* Toggle the navbar */
 .links-toggle {
-  font-size: 1.5rem;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: var(--background-color-dark);
-  height: 400px;
+  padding: 2rem 0;
+  height: auto;
   width: 100%;
   position: absolute;
-  left: 0%;
-  right: 0;
-  top: 100%;
-  text-align: center;
+  left: 0;
+  top: 10%;
+
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  gap: 1rem;
+
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Fixed nav  bar on scroll */
@@ -161,20 +145,17 @@ header {
   z-index: 100;
   position: fixed;
   top: 0;
-  left: 0%;
-  right: 0%;
 
   height: 10vh;
   width: 100%;
-
   transition: all ease-out 1s;
   background-color: rgba(0, 0, 0, 0.5);
   color: var(--text-color-light);
 }
 
 .logo img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 125px;
 }
 
@@ -200,6 +181,7 @@ header {
 
 .banner2 p {
   padding: 2rem;
+  min-width: 20em;
 }
 
 /* !There will be 2 methods to split content on the page */
@@ -435,28 +417,17 @@ header {
   .links {
     display: block;
     height: auto;
+    padding: 1em;
   }
 
-  .links > a {
+  .links a {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-  }
-
-  .scroll-links a {
-    background-color: rgb(0, 0, 0, 0.5);
-    color: lightgreen;
-    padding: 1rem 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-    cursor: pointer;
-  }
-
-  .scroll-links a:hover {
-    transition: all ease-in 0.25s;
+    gap: 2rem;
+    padding: 0 2rem;
+    height: 100%;
   }
 
   .contact-btn {

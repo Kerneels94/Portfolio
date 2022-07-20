@@ -44,22 +44,20 @@ window.addEventListener("scroll", fixednav);
 const slides = document.querySelectorAll(".slide");
 const nextBtn: any = document.querySelector(".nextBtn");
 const prevBtn: any = document.querySelector(".prevBtn");
+
 slides.forEach(function (slide: any, index) {
   slide.style.left = `${index * 100}%`;
 });
+
 let counter = 0;
-
-nextBtn.addEventListener("click", function () {
-  counter++;
-  carousel();
-});
-
-prevBtn.addEventListener("click", function () {
-  counter--;
-  carousel();
-});
+let timer;
 
 function carousel() {
+  slides.forEach(function (slide: any) {
+    slide.style.transform = `translateX(-${counter * 100}%)`;
+  });
+
+  // Setting buttons
   if (counter < slides.length - 1) {
     nextBtn.style.display = "block";
   } else {
@@ -70,9 +68,15 @@ function carousel() {
   } else {
     prevBtn.style.display = "none";
   }
-  slides.forEach(function (slide: any) {
-    slide.style.transform = `translateX(-${counter * 100}%)`;
-  });
 }
+nextBtn.addEventListener("click", function () {
+  counter++;
+  carousel();
+});
+
+prevBtn.addEventListener("click", function () {
+  counter--;
+  carousel();
+});
 
 prevBtn.style.display = "none";
