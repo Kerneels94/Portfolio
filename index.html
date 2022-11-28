@@ -13,20 +13,17 @@
   </head>
   <body>
     <!-- Header -->
-    <header aria-label="header" class="container relative p-2 mx-100">
-      <nav
-        aria-label="navigation"
-        class="flex items-center justify-between border-solid border-green-300 border-opacity-100 border-b-4 w-full"
-      >
+    <header aria-label="header" class="container relative p-2 mx-auto">
+      <nav aria-label="navigation" class="flex items-center justify-between">
         <div class="logo">
           <img src="./img/CB.svg" alt="#" class="block w-40" />
         </div>
-        <ul class="hidden md:flex space-x-6">
+        <ul class="hidden space-x-6 md:flex">
           <button class="hover:text-green-400">Projects</button>
           <button class="hover:text-green-400">About</button>
           <button class="hover:text-green-400">Contact</button>
           <button
-            class="btn hover:bg-green-300 hover:text-gray-900 p-2 text-gray-800 rounded-3xl cursor-pointer"
+            class="btn p-2 text-gray-800 rounded-3xl cursor-pointer hover:bg-green-300 hover:text-gray-900"
             aria-label="button to contact"
           >
             Contact me
@@ -41,24 +38,48 @@
         </button>
       </nav>
     </header>
+
     <!-- Intro image -->
-    <section class="intro-image" aria-label="portfolio image">
-      <div class="image rounded">
-        <img src="#" alt="portfolio-image" />
-      </div>
+    <section class="hero">
       <div
-        class="intro-image-text flex items-center justify-between flex-row text-3xl p-3"
+        class="container flex flex-col-reverse items-center px-6 mx-auto mt-10 space-y-0 md:flex-row md:space-y-0"
       >
-        <h1>Hi, I am Cornelius AkA <span class="shadow">Korrels</span></h1>
-        <p>I am a graphic designer, UX/UI designer - Front-end Developer</p>
+        <!-- LEft item -->
+        <div class="flex flex-col mb-32 space-y-12 pt-5 md:w-1/2">
+          <h1
+            class="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left"
+          >
+            Hi, I am Cornelius
+          </h1>
+          <p class="max-w-md text-lg text-center md:text-left">
+            UI/UX Designer / Front-End Developer
+          </p>
+          <div class="flex justify-center space-x-12 md:justify-start">
+            <button
+              class="p-3 text-gray-800 rounded-3xl cursor-pointer bg-green-400 hover:bg-green-300 hover:text-gray-900"
+            >
+              Source Code
+            </button>
+            <button
+              class="p-3 text-gray-800 rounded-3xl cursor-pointer bg-green-400 hover:bg-green-300 hover:text-gray-900"
+            >
+              Projects
+            </button>
+          </div>
+        </div>
+        <!-- Image -->
+        <div>
+          <img class="rounded-full md:w-2/2" src="./img/image1.jpg" alt="" />
+        </div>
       </div>
     </section>
 
     <!-- Currently working on -->
-    <section
-      class="mx-auto flex align-center space-around"
-      aria-label="Currently working on"
-    >
+    <section class="current" aria-label="Currently working on">
+      <!-- flex container -->
+      <div
+        class="container flex flex-col px-4-mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row"
+      ></div>
       <h2>Currently working on</h2>
       <p>.......</p>
     </section>

@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*,
+*:before,
+*::after {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Root styling */
+
+:root {
+  --bg-color: #262626;
+}
