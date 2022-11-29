@@ -4,9 +4,9 @@ The entire portfolio is built with Tailwind Css for styling
 
 ## Tech stack
 
-1 Html
-2 Tailwind Css
-3 Javascript
+- Html
+- Tailwind Css
+- Javascript
 
 ## Sections
 
@@ -24,7 +24,7 @@ The entire portfolio is built with Tailwind Css for styling
 3 Skills
 - Heading
 - Paragraph
-cards => 
+1 Cards 
 - languages 
 - Frameworks
 
