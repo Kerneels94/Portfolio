@@ -1,20 +1,8 @@
-// Dynamic date
-const dateUpdate = document.querySelector("#date");
-const dateFunc = () => {
-  const date = new Date();
-  const [month, day, year] = [
-    date.getMonth(),
-    date.getDate(),
-    date.getFullYear(),
-  ];
-  dateUpdate.textContent = date;
-};
+const btn = document.querySelector("[data-menu-btn]");
+const nav = document.querySelector("#menu");
 
-// EventListeners
-window.addEventListener("DOMContentLoaded", () => {
-  dateFunc();
+btn.addEventListener("click", () => {
+  btn.classList.toggle("open");
+  nav.classList.toggle("flex");
+  nav.classList.toggle("hidden");
 });
-// TOdo buttons
-// Todo dropdown menu
-// Functions
-// Todo

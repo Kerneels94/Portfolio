@@ -15,3 +15,11 @@
 :root {
   --bg-color: #262626;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.open {
+  transform: rotate(90deg);
+}
