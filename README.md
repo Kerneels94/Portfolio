@@ -24,7 +24,7 @@ The entire portfolio is built with Tailwind Css for styling
 3 Skills
 - Heading
 - Paragraph
-1 Cards 
+- Cards
 - languages 
 - Frameworks
 
