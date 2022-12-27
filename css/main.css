@@ -565,14 +565,6 @@ video {
   margin: 2.5rem;
 }
 
-.-m-10 {
-  margin: -2.5rem;
-}
-
-.m-6 {
-  margin: 1.5rem;
-}
-
 .m-1 {
   margin: 0.25rem;
 }
@@ -592,16 +584,6 @@ video {
   margin-bottom: 5rem;
 }
 
-.my-24 {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
-}
-
-.my-10 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-}
-
 .mb-32 {
   margin-bottom: 8rem;
 }
@@ -610,16 +592,8 @@ video {
   margin-top: 2.5rem;
 }
 
-.mt-24 {
-  margin-top: 6rem;
-}
-
 .-mt-14 {
   margin-top: -3.5rem;
-}
-
-.mb-24 {
-  margin-bottom: 6rem;
 }
 
 .block {
@@ -652,6 +626,10 @@ video {
 
 .max-w-7xl {
   max-width: 80rem;
+}
+
+.max-w-lg {
+  max-width: 32rem;
 }
 
 @keyframes pulse {
@@ -692,20 +670,16 @@ video {
   justify-content: space-between;
 }
 
-.gap-5 {
-  gap: 1.25rem;
+.gap-20 {
+  gap: 5rem;
 }
 
 .gap-10 {
   gap: 2.5rem;
 }
 
-.gap-20 {
-  gap: 5rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
@@ -821,8 +795,8 @@ video {
   padding: 1.5rem;
 }
 
-.p-10 {
-  padding: 2.5rem;
+.p-1 {
+  padding: 0.25rem;
 }
 
 .py-20 {
@@ -1034,23 +1008,6 @@ html {
 }
 
 @media (min-width: 768px) {
-  .md\:m-5 {
-    margin: 1.25rem;
-  }
-
-  .md\:m-0 {
-    margin: 0px;
-  }
-
-  .md\:m-20 {
-    margin: 5rem;
-  }
-
-  .md\:mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .md\:mb-4 {
     margin-bottom: 1rem;
   }
@@ -1093,18 +1050,6 @@ html {
 
   .md\:justify-center {
     justify-content: center;
-  }
-
-  .md\:gap-0 {
-    gap: 0px;
-  }
-
-  .md\:gap-10 {
-    gap: 2.5rem;
-  }
-
-  .md\:gap-20 {
-    gap: 5rem;
   }
 
   .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
