@@ -23,3 +23,25 @@ html {
 .open {
   transform: rotate(90deg);
 }
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(0, 0%, 13%);
+  border-radius: 100vw;
+  margin-block: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsla(143, 10%, 16%, 0.623);
+  border-radius: 100vw;
+  box-shadow: 5px 5px 20px 20px #b3fcdd;
+}
+
+@supports (scroll-bar-color: red blue) {
+  * {
+    scrollbar-color: red blue;
+  }
+}
